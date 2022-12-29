@@ -11,12 +11,11 @@
 //!
 //! ```rust
 //! use std::sync::Mutex;
-//! use lazy_static::lazy_static;
 //! use nonparallel::nonparallel;
 //!
 //! // Create two locks
-//! lazy_static! { static ref MUT_A: Mutex<()> = Mutex::new(()); }
-//! lazy_static! { static ref MUT_B: Mutex<()> = Mutex::new(()); }
+//! static MUT_A: Mutex<()> = Mutex::new(());
+//! static MUT_B: Mutex<()> = Mutex::new(());
 //!
 //! // Mutually exclude parallel runs of functions using those two locks
 //!

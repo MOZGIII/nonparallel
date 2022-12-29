@@ -2,10 +2,8 @@ use std::sync::{Arc, Mutex};
 use std::thread;
 
 use nonparallel::nonparallel;
-use lazy_static::lazy_static;
 
-lazy_static! { static ref MUT_A: Mutex<()> = Mutex::new(()); }
-lazy_static! { static ref MUT_B: Mutex<()> = Mutex::new(()); }
+static MUT_A: Mutex<()> = Mutex::new(());
 
 const COUNT: usize = 1_000;
 
@@ -48,7 +46,11 @@ fn it_works() {
     let vec: Vec<_> = Arc::try_unwrap(vecarc).unwrap().into_inner().unwrap();
 
     // Validate vec size
-    assert_eq!(vec.len(), COUNT * 3, "Vector does not contain 3*COUNT items");
+    assert_eq!(
+        vec.len(),
+        COUNT * 3,
+        "Vector does not contain 3*COUNT items"
+    );
 
     // Split vec in three. Every slice should only contain either 1, 2 or 3.
     // (depending on which function was faster).
