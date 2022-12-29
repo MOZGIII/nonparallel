@@ -11,7 +11,7 @@
 //!
 //! ```rust
 //! use std::sync::Mutex;
-//! use nonparallel::nonparallel;
+//! use nonparallelex::nonparallel;
 //!
 //! // Create two locks
 //! static MUT_A: Mutex<()> = Mutex::new(());

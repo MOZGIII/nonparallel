@@ -1,4 +1,4 @@
-use nonparallel::nonparallel;
+use nonparallelex::nonparallel;
 use tokio::sync::Mutex;
 
 static MUT_A: Mutex<()> = Mutex::const_new(());

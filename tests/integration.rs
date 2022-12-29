@@ -1,7 +1,7 @@
 use std::sync::{Arc, Mutex};
 use std::thread;
 
-use nonparallel::nonparallel;
+use nonparallelex::nonparallel;
 
 static MUT_A: Mutex<()> = Mutex::new(());
 

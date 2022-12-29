@@ -1,11 +1,11 @@
 [package]
-name = "nonparallel"
+name = "nonparallelex"
 version = "0.2.0"
 authors = ["Danilo Bargen <mail@dbrgn.ch>", "MOZGIII <mike-n@narod.ru>"]
-documentation = "https://docs.rs/nonparallel/"
-repository = "https://github.com/dbrgn/nonparallel/"
+documentation = "https://docs.rs/nonparallelex/"
+repository = "https://github.com/MOZGIII/nonparallelex/"
 license = "MIT OR Apache-2.0"
-description = "Rust macro for ensuring non-parallel execution of functions."
+description = "Rust macro for ensuring non-parallel execution of functions, extended Fork of `nonparallel`."
 readme = "README.md"
 keywords = ["parallel", "concurrent", "lock", "macro", "testing"]
 include = [
